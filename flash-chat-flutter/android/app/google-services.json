@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "690932092711",
+    "project_id": "flash-chat-5b3b0",
+    "storage_bucket": "flash-chat-5b3b0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:690932092711:android:a1e97e7a0af710559c6302",
+        "android_client_info": {
+          "package_name": "co.skywalker.flash_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "690932092711-8lalfslid6ps3ajjc16qdtfsu9apsue3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8C68_nnMT-iHIGXk7Sq7wZjpVsH6W2vk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "690932092711-8lalfslid6ps3ajjc16qdtfsu9apsue3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
