@@ -113,8 +113,20 @@ fonts:
 ```
 Icon(
   icon: Icons.email,
+  color:
+  size:
 )
 ```
+
+You can also have another type of icons by adding dependency ```font_awesome_flutter: ^8.4.0``` to ```pubspec.yaml```
+Then, ```import 'package:font_awesome_flutter/font_awesome_flutter.dart';```. Now you can have
+```
+Icon(
+ FontAwesomeIcons.minus ,
+ color: Colors.white,
+ size: 20.0,
+ ),
+ ```
 
 9. Card:
 ```
@@ -178,6 +190,8 @@ To make a list of similar widgets, you can do:
   final player = AudioCache();
   player.play('note2.wav');
   ```
+  
+  
 
 ## Important Ideas
 
