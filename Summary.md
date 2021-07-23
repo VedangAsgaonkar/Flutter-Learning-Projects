@@ -70,6 +70,52 @@ Container(
 )
 ```
 
+6. Fonts:
+To get new fonts, download the font file in fonts folder ( make a fonts folder ). Then in ```pubspecs.yaml``` , you can have for example:
+```
+fonts:
+    - family: Pacifico
+      fonts:
+        - asset: fonts/Pacifico-Regular.ttf
+ ```
+ 
+ To style up the text, you can use:
+ ```
+ Text(
+  'Hello World'
+   style : TextStyle(
+    fontFamily : 'Pacifico',
+    fontSize : 30.0,
+    color : Colors.blue,
+    fontWeight : FontWeight.bold,
+   ),
+ )
+ ```
+ 
+ 7. Seperating out:
+ You can use the following to make a blank space:
+ ```
+ SizedBox(
+  height: 10.0, 
+ ),
+ ```
+ To draw a horizontal line :
+ ```
+ SizedBox(
+           width: 100.0,
+           child: Divider(
+            color: Colors.white,
+           ),
+         ),
+  ```
+  
+8. Icons:
+```
+Icon(
+  icon: Icons.email,
+)
+```
+
 
 
 
