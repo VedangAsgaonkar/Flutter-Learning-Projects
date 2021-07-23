@@ -192,6 +192,22 @@ To make a list of similar widgets, you can do:
   ```
   
   15. Slider
+  ```
+  Slider(
+          value: 150.0,
+          min: 120.0,
+          max: 220.0,
+          activeColor: Color(0xffeb1555),
+          inactiveColor: Color(0xff8d8e98),
+          onChanged: (double newValue){
+            setState(() {
+              height = newValue.toInt() ;
+            });
+          },
+        ),
+  ```
+  
+  
   
   
 
@@ -245,6 +261,10 @@ To make a list of similar widgets, you can do:
               child: Slider()
   )
   ```
+  
+  4. Making Custom Widgets:
+  You can make custom widgets by using components that constitute current widgets. You can also add functionality to them by passing in a function and giving them a member
+  ```final Function onTap;```
             
 
 ## Math
