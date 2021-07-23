@@ -335,6 +335,10 @@ MaterialApp(
     print(data);
   }
   ```
+  
+  8. Sharing data between screens while pushing
+  To send data to a screen that you are pushing, you can create a member in that screen, and make a constructor allowing us to push data
+  ```Navigator.push(context, MaterialPageRoute(builder: (context){ return ContactScreen(name: "Hello",); } ));```
             
 
 ## Math
