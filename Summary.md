@@ -66,6 +66,10 @@ Container(
   decoration: BoxDecoration(
       borderRadius : BorderRadius.only(topLeft : Radius.circular(20.0)),
       color : Color[0xff123456],
+      image: DecorationImage(
+            image: AssetImage('images/location_background.jpg'),
+            fit: BoxFit.cover,
+          ),
     ),
 )
 ```
