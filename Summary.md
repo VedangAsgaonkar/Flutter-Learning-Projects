@@ -271,6 +271,27 @@ MaterialApp(
  Now, to get location, ```import 'package:geolocator/geolocator.dart' ;	```
  Then we can use
  ```
+ class Location{
+
+  var latitude ;
+  var longitude ;
+
+  Future<void> getLocation() async{
+    try {
+      Position position = await Geolocator().getCurrentPosition(
+          desiredAccuracy: LocationAccuracy.low);
+      latitude = position.latitude;
+      longitude = position.longitude;
+    }
+    catch(e){
+      print(e);
+    }
+
+  }
+}
+ ```
+ and
+ ```
  Future<void> printLocation() async{
     Location l = Location();
 
