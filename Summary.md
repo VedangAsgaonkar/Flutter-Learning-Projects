@@ -344,6 +344,45 @@ MaterialApp(
 ## Math
 Use ```import 'dart:math';```. To generate random integers in 0 to 5 use ```Random().nextInt(6)```
 
+## Async
+The control in any program flows sequentially throught the code. Now it may happen that some function being called is very time consuming. In this case,
+we may wish that the program continue ahead while the function is being executed. Thus such a function is declared async.
+
+
+void printPosition() async{
+	//get and print position
+}
+
+void main(){
+	print("Hi");
+	printPosition();
+	print("Hello");
+}
+
+Now, it may happens that we wish to use the data returned by an async function. In that case, we need to await its execution. But parts of code
+that donot depend on that data should not have to wait. So the following construction is typical
+
+
+Future<Position> printPosition() async{
+	//get and return position
+}
+
+void processPosition() async{
+	Postion p = await printPosition()
+	//does something with position
+}
+
+void main(){
+	print("Hi");
+	processPosition();
+	print("Hello");
+}
+
+U can only await on a method that returns a future.
+
+If we had not awaited for the Position, it would have had a null value and in the processing code. In that case we would have to declare it as a Future<Position>
+This means it is kind of a promise that Position would be recieved in the future.
+
 
 
 
