@@ -263,6 +263,27 @@ MaterialApp(
  You can directly push a screen using 
  ```Navigator.push(context, MaterialPageRoute(builder: (context){ return ContactScreen(); } ));```
  Pop remains same
+ 
+ 20. Getting location
+ Add dependency ```geolocator: ^3.0.1``` to ```pubspec.yaml``` . To ```AndroidManifest.xml``` add the permission for location as
+ ```<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />``` just after the ```<manifest>``` opening tag.
+ 
+ Now, to get location, ```import 'package:geolocator/geolocator.dart' ;	```
+ Then we can use
+ ```
+ Future<void> printLocation() async{
+    Location l = Location();
+
+    try {
+      await l.getLocation();
+      latitude = l.latitude;
+      longitude = l.longitude;
+    }
+    catch(e){
+      print("Error");
+    }
+  }
+ ```
 
   
 
