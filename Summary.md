@@ -502,7 +502,7 @@ String password ;
 ```
 Then,
 ```
-void register(){
+void register() async{
 	try{
            final newUser = await _auth.createUserWithEmailAndPassword(email: email, password: password);
              if(newUser != null){
@@ -515,7 +515,26 @@ void register(){
 }
 ```
 
-
-
+2. Login
+```import 'package:firebase_auth/firebase_auth.dart';```. Then create the following:
+```
+final _auth = FirebaseAuth.instance ;
+String email ;
+String password ;
+```
+Then, to Login:
+```
+	void login() async{
+                  try{
+                    final user = await _auth.signInWithEmailAndPassword(email: email, password: password);
+                    if(user != null){
+                      // action for successful login
+                    }
+                  }
+                  catch(e){
+                    print(e) ;
+                  }
+	}
+```
 
    
