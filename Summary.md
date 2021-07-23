@@ -299,6 +299,12 @@ CircleAvatar(
   4. Making Custom Widgets:
   You can make custom widgets by using components that constitute current widgets. You can also add functionality to them by passing in a function and giving them a member
   ```final Function onTap;```
+  
+  5. Sharing data between two screens:
+  Make a global variable that has the data in the parent screen. Then import the parent screen and use this data in the other screen
+  
+  6. Accessing data in a Stateful widget
+  Consider a member of the Stateful widget say ```int x=1```. To access it in the corresponding State class, you can use ```widget.x```
             
 
 ## Math
