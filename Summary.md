@@ -305,6 +305,19 @@ CircleAvatar(
   
   6. Accessing data in a Stateful widget
   Consider a member of the Stateful widget say ```int x=1```. To access it in the corresponding State class, you can use ```widget.x```
+  
+  7. Making API calls
+  In ```pubspec.yaml``` add dependency ```http: ^0.12.0+2```. Then ```import 'package:http/http.dart'; import 'dart:convert';```.
+  Then
+  ```
+  void getData() async{
+    Response response = await get(//put url String here with api key);
+    String data= response.body ;
+    var decodedData = jsonDecode(data) ;
+    var weatherDesc = decodedData['weather'][0]['description'] ;
+    print(data);
+  }
+  ```
             
 
 ## Math
