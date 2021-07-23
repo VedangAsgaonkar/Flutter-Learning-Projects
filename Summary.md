@@ -207,6 +207,40 @@ To make a list of similar widgets, you can do:
         ),
   ```
   
+  16. Rounded Buttons
+  ```
+  class RoundIconButton extends StatelessWidget {
+  RoundIconButton({this.child, this.onPressed});
+
+  final Widget child ;
+  final Function onPressed ;
+
+  @override
+  Widget build(BuildContext context) {
+    return RawMaterialButton(
+      child: this.child ,
+      onPressed: this.onPressed ,
+      shape:  CircleBorder(),
+      fillColor: Color(0xff0A0E21),
+      constraints: BoxConstraints.tightFor(
+        width: 56.0,
+        height: 56.0,
+      ),
+      elevation: 6,
+    );
+  }
+}
+```
+
+17. FloatingActionButton
+18. CircularAvatar
+Useful to display circular objects
+```
+CircleAvatar(
+              radius: 50.0,
+              backgroundImage: AssetImage('images/appstore.png'),
+            ),
+```  
   
   
   
