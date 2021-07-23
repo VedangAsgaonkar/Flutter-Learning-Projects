@@ -486,6 +486,35 @@ firebase_core: ^0.3.4
 firebase_auth: ^0.8.4+4
 cloud_firestore: ^0.9.13+1
 ```
+In ```AndroidManifest.xml``` add the following permissions after the ```<manifest>``` start tag:
+```
+<uses-permission android:name="android.permission.INTERNET"/>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+```
+
+1. Register
+```import 'package:firebase_auth/firebase_auth.dart';```. Then create the following:
+```
+final _auth = FirebaseAuth.instance ;
+String email ;
+String password ;
+```
+Then,
+```
+void register(){
+	try{
+           final newUser = await _auth.createUserWithEmailAndPassword(email: email, password: password);
+             if(newUser != null){
+               Navigator.pushNamed(context, 'chat');
+             }
+         }
+        catch(e){
+          print(e) ;
+        }
+}
+```
+
 
 
 
