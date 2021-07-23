@@ -327,6 +327,25 @@ MaterialApp(
 
  22. spinner, model progess hud, animations 
  23. TextField
+```
+final textEditingController = TextEditingController();
+```
+ ```
+ TextField(
+ 	style : TextStyle(color:black , fontSize:25.0),
+ 	controller : textEditingController ,
+ 	onChanged : (value){
+		// do something with the value in text field
+	},
+	decoration: InputDecoration(
+ 		hintText: 'Enter your email',
+  		contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+  		border: OutlineInputBorder(
+   		borderRadius: BorderRadius.all(Radius.circular(32.0)),
+  	),
+ )
+ ```
+ To clear the TextField programaticaly, we can call ```textEditingController.clear()```.
 
 ## Important Ideas
 
