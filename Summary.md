@@ -499,7 +499,7 @@ This means it is kind of a promise that Position would be recieved in the future
 Dart, like Java, is a language where the object name is just a pointer to a data location in the heap. This means that we can pass the object name into a method, make changes to it and the original object would get changed. There is no copy-constructor for objects.
 
 ## Firebase
-Create a firebase account. Setup authorisation and firebase database.
+Create a firebase account. Setup authorisation and firebase database. Add the application name into it and modeify build.gradle
 Then, in ```pubspec.yaml``` add the following dependencies:
 ```
 firebase_core: ^0.3.4
@@ -575,4 +575,22 @@ Then, to Login:
           }
 
   }
+```
+	
+4. Storing Data:
+Create a database collection object in firebase, call it 'messages' for example. This collection has data with two attributes 'sender' and 'text'
+```import 'package:cloud_firestore/cloud_firestore.dart';```
+To store data, we first create an object:
+```final _firestore = Firestore.instance ;```
+Then:
+```
+	try{
+           _firestore.collection('messages').add({
+           'text' : messageText ,
+           'sender' : loggedInUser.email ,
+            });
+        }
+        catch(e){
+
+        }
 ```
