@@ -305,6 +305,25 @@ MaterialApp(
     }
   }
  ```
+ 
+ 21. DropdownMenu
+ Make the list that goes into the menu:
+ ```
+ List<DropdownMenuItem<String>> currencies = [DropdownMenuItem<String>(
+    child: Text('Select Currency'),
+    value: 'Select Currency',
+  )] ;
+ ```
+ Add elements to this list. Then feed it into the dropdown menu:
+ ```
+ DropdownButton<String>(
+              value: selectedCurrency, //the value that will show in the closed form
+              items: currencies,
+	      onChanged : (value){
+	      
+	      },
+	      )
+ ```
 
   
 
@@ -456,7 +475,8 @@ U can only await on a method that returns a future.
 If we had not awaited for the Position, it would have had a null value and in the processing code. In that case we would have to declare it as a Future<Position>
 This means it is kind of a promise that Position would be recieved in the future.
 
-
+## Classes and Objects
+Dart, like Java, is a language where the object name is just a pointer to a data location in the heap. This means that we can pass the object name into a method, make changes to it and the original object would get changed. There is no copy-constructor for objects.
 
 
 
