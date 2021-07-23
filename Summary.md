@@ -157,6 +157,32 @@ Expanded(
 )
 ```
 
+13. List of similar widgets
+To make a list of similar widgets, you can do:
+ ```
+ List<Widget> myList = []
+ for( text in StringList ){
+  myList.add(Text(text));
+ }
+ ```
+ 
+ 14. Playing Audio
+ To ```pubspec.yaml``` add dependency ```audioplayers: ^0.10.0```. Store the audio file in assets folder. Add
+ ```
+ assets:
+  - assets/
+  ```
+  In the main program, ```import 'package:audioplayers/audio_cache.dart';```
+  Then you can play audio as:
+  ```
+  final player = AudioCache();
+  player.play('note2.wav');
+  ```
+
+## Important Ideas
+
+1. Place all constants in a ```constants.dart``` file. Also begin names of constants with ```k```.
+
 ## Math
 Use ```import 'dart:math';```. To generate random integers in 0 to 5 use ```Random().nextInt(6)```
 
