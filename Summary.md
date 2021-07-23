@@ -537,4 +537,22 @@ Then, to Login:
 	}
 ```
 
-   
+3. Fetching user data
+```import 'package:firebase_auth/firebase_auth.dart';```. Then create the following:
+```
+	final _firestore = Firestore.instance ;
+	FirebaseUser loggedInUser ;
+	  void getCurrentUser() async{
+          try{
+            final user = await _auth.currentUser() ;
+          if(user != null){
+            loggedInUser = user ;
+            print(loggedInUser.email);
+          }
+          }
+          catch(e){
+            print(e) ;
+          }
+
+  }
+```
