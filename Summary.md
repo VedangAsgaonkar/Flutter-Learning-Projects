@@ -325,7 +325,7 @@ MaterialApp(
 	      )
  ```
 
-  
+ 22. spinner, model progess hud, animations 
 
 ## Important Ideas
 
@@ -478,8 +478,14 @@ This means it is kind of a promise that Position would be recieved in the future
 ## Classes and Objects
 Dart, like Java, is a language where the object name is just a pointer to a data location in the heap. This means that we can pass the object name into a method, make changes to it and the original object would get changed. There is no copy-constructor for objects.
 
-
-
+## Firebase
+Create a firebase account. Setup authorisation and firebase database.
+Then, in ```pubspec.yaml``` add the following dependencies:
+```
+firebase_core: ^0.3.4
+firebase_auth: ^0.8.4+4
+cloud_firestore: ^0.9.13+1
+```
 
 
 
