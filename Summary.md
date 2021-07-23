@@ -242,7 +242,24 @@ CircleAvatar(
             ),
 ```  
   
-  
+19. Navigator
+* Named routes
+```
+MaterialApp(
+  initialRoute : '/' ,
+  routes : {
+    '/' : (context)=>HomeScreen() ,
+    'contact' : (context)=>ContactScreen(),
+  },
+ )
+ ```
+ Now you can push screens as ```Navigator.pushNamed(context, 'contact')```. You can pop screen as ```Navigator.pop(context)```.
+ 
+ * Direct push
+ You can directly push a screen using 
+ ```Navigator.push(context, MaterialPageRoute(builder: (context){ return ContactScreen(); } ));```
+ Pop remains same
+
   
 
 ## Important Ideas
