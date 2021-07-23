@@ -116,6 +116,53 @@ Icon(
 )
 ```
 
+9. Card:
+```
+Card(
+  color:
+  margin:
+  padding:
+  child:
+)
+```
+
+10. ListTile:
+```
+ListTile(
+  leading: 
+  title:
+  subtitle:
+  trailing:
+)
+```
+11. FlatButton:
+```
+FlatButton(
+  child:
+  onPressed: (){
+  
+  }
+)
+```
+
+12. Expanded:
+A widget which is child of a row/ column and will take up all space that is blank in the parent.
+```
+Expanded(
+  flex: // a number. indicates ratio of size with other expanded widgets inside the same parent
+  child: Padding(
+    padding: EdgeInsets.symmetric( vertical: 10.0, horizontal: 20.0),
+    child: 
+  )  
+)
+```
+
+## Math
+Use ```import 'dart:math';```. To generate random integers in 0 to 5 use ```Random().nextInt(6)```
+
+
+
+
 
 
 
