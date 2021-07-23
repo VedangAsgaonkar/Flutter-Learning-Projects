@@ -191,11 +191,61 @@ To make a list of similar widgets, you can do:
   player.play('note2.wav');
   ```
   
+  15. Slider
+  
   
 
 ## Important Ideas
 
 1. Place all constants in a ```constants.dart``` file. Also begin names of constants with ```k```.
+2. Setting State:
+  In a Stateful Widget's State class, you can use
+  ```
+  setState(){
+  
+  }
+  ```
+  The variables that are assigned inside change throughout the class
+  
+3. Theme:
+  You can set a theme for the whole app by using
+  ```
+  MaterialApp(
+  theme:  ThemeData(
+        primaryColor: Color(0xff0A0E21),
+        accentColor: Colors.purple,
+        scaffoldBackgroundColor: Color(0xff0A0E21),
+        textTheme: TextTheme(
+        body1: TextStyle(
+        color: Colors.white,
+      ),
+  )
+  ```
+  You can also copy from existing themes and make small changes
+  ```
+  theme: ThemeData.dark().copyWith(
+        primaryColor: Color(0xff0A0E21),
+        accentColor: Colors.purple,
+        scaffoldBackgroundColor: Color(0xff0A0E21),
+
+        textTheme: TextTheme(
+          body1: TextStyle(
+            color: Colors.white,
+          ),
+        ),
+      ),
+  ```
+  
+  Similarly, you can achieve fine-grained control on any widget's appearance by making use of it's Theme class. For example:
+  ```
+  SliderTheme(
+              data: SliderTheme.of(context).copyWith(
+                  thumbShape: RoundSliderThumbShape(enabledThumbRadius: 15.0),
+               ),
+              child: Slider()
+  )
+  ```
+            
 
 ## Math
 Use ```import 'dart:math';```. To generate random integers in 0 to 5 use ```Random().nextInt(6)```
