@@ -1,5 +1,8 @@
 # Summary
 In summary we note the following:
+<br></br>
+At the top, we always import:
+```import 'package:flutter/material.dart'; ```
 
 ## Important Widget Combinations:
 
@@ -23,7 +26,9 @@ Scaffold(
             color:
            ),
   body  : SafeArea(
-            child:
+            child: Center(
+              child:
+            ),
           ),
 )
 ```
@@ -39,3 +44,34 @@ Then you can use images as:
 Image(
   image : AssetImage('image/'),
 )
+```
+
+4. Column and Row:
+  Use a combination of these to style up an UI
+```
+Column(
+  children : <Widget>[] , //a List<Widget>
+  mainAxisAlignment : MainAxisAlignment.center,
+  crossAxisAlignment : CrossAxisAlignment.stretch, // stretch all children
+),
+```
+
+5. Container:
+```
+Container(
+  child:
+  width: 10.0, //putting width as double.infinity would make it span the screen
+  height: 20.0,
+  padding: EdgeInsets.all(10.0), //other options also available
+  decoration: BoxDecoration(
+      borderRadius : BorderRadius.only(topLeft : Radius.circular(20.0)),
+      color : Color[0xff123456],
+    ),
+)
+```
+
+
+
+
+
+   
