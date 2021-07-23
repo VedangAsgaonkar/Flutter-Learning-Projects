@@ -361,6 +361,17 @@ MaterialApp(
                     },
  ```           
 
+10. The initState() method
+Any task to be performed while the screen is made is written inside initState() of the State class
+```
+@override
+  void initState() {
+    super.initState();
+    // The action to be done
+  }
+```
+
+
 ## Math
 Use ```import 'dart:math';```. To generate random integers in 0 to 5 use ```Random().nextInt(6)```
 
