@@ -343,7 +343,23 @@ MaterialApp(
   8. Sharing data between screens while pushing
   To send data to a screen that you are pushing, you can create a member in that screen, and make a constructor allowing us to push data
   ```Navigator.push(context, MaterialPageRoute(builder: (context){ return ContactScreen(name: "Hello",); } ));```
-            
+  
+  9. Sharing data between screens while poping
+  The pop method can return data through the second optional parameter
+  ```Navigator.pop(context, cityName);```
+  The corresponding push must await this data and return it to the variable being assigned
+  ```
+  onPressed: () async{
+                      var typedName = await Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return CityScreen();
+                          },
+                        ),
+                      );
+                    },
+ ```           
 
 ## Math
 Use ```import 'dart:math';```. To generate random integers in 0 to 5 use ```Random().nextInt(6)```
